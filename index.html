@@ -7,24 +7,37 @@
 </head>
 <body>
 
-<div class="container">
+<section class="hero">
   <h2>Kepada Yth:</h2>
   <h1 id="namaTamu">Tamu Undangan</h1>
+  <button onclick="bukaUndangan()">Buka Undangan</button>
+</section>
 
-  <p class="opening">Kami mengundang Anda ke acara kami</p>
-
-  <h2 class="nama">Rina & Budi</h2>
-
+<section id="content" class="hidden">
+  <h2>Rina & Budi</h2>
   <p>Sabtu, 10 Mei 2026</p>
-  <p>Gedung Serbaguna</p>
 
-  <button onclick="playMusic()">🎵 Buka Undangan</button>
-</div>
+  <!-- RSVP -->
+  <h3>Konfirmasi Kehadiran</h3>
+  <select id="kehadiran">
+    <option value="Hadir">Hadir</option>
+    <option value="Tidak Hadir">Tidak Hadir</option>
+  </select>
+  <button onclick="kirimRSVP()">Kirim</button>
 
-<audio id="music" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
+  <!-- UCAPAN -->
+  <h3>Ucapan & Doa</h3>
+  <input type="text" id="namaUcapan" placeholder="Nama">
+  <textarea id="isiUcapan" placeholder="Tulis ucapan..."></textarea>
+  <button onclick="kirimUcapan()">Kirim Ucapan</button>
 
+  <div id="listUcapan"></div>
+</section>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
+
+<script src="firebase.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
