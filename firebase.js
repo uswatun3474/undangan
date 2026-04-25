@@ -35,4 +35,10 @@ db.ref("ucapan").on("value", (snapshot) => {
       <p><b>${data[id].nama}</b>: ${data[id].isi}</p>
     `;
   }
+  {
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
 });
