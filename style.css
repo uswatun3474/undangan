@@ -1,17 +1,19 @@
 body {
-  font-family: Arial;
-  text-align: center;
-  background: linear-gradient(pink, white);
+  font-family: 'Segoe UI';
   margin: 0;
+  text-align: center;
+  background: linear-gradient(#fff0f5, #ffffff);
 }
 
-.container {
-  margin-top: 100px;
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.nama {
-  font-size: 32px;
-  color: #d63384;
+.hidden {
+  display: none;
 }
 
 button {
@@ -19,6 +21,15 @@ button {
   background: #d63384;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
+  margin-top: 10px;
   cursor: pointer;
+}
+
+input, textarea, select {
+  width: 80%;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
